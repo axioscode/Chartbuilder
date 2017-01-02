@@ -23,14 +23,15 @@ transition(arg)
     transition: arg
 
 span.step-number
-	background-color #333
-	border-radius 100px
-	color #fff
-	width 1.5em
-	height 1.5em
-	display inline-block
-	text-align center
-	margin-right 0.25em
+  background-color #333
+  border-radius 100px
+  color #fff
+  width 1.5em
+  height 1.5em
+  display inline-block
+  text-align center
+  margin-right 0.25em
+  line-height 1.75
 
 .editor-options
 	font-family $font-sans
@@ -290,11 +291,9 @@ span.step-number
 
 .mobile-overrides
 	&> h2:first-child
-		font-family $font-sans-bold
+		font-family $font-sans
+    font-weight: 400
 		margin-bottom 1em
 	.scale-options
 		margin-top 0.5em
 		margin-bottom 0.5em
-
-
-
