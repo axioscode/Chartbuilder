@@ -1,6 +1,6 @@
-$em_size = 20px
-$em_size_small = 14px
-$em_size_large = 36px
+$em_size = 14px
+$em_size_small = 10px
+$em_size_large = 20px
 
 div.renderer-wrapper
   font-smoothing antialiased
@@ -128,11 +128,11 @@ svg
       font-style italic
 
   &.svg-text-credit
-    font-size $em_size*0.6
+    font-size $em_size
     fill $color-chart-meta
     text-anchor start
   &.svg-text-source
-    font-size $em_size*0.6
+    font-size $em_size
     fill $color-chart-meta
     //text
       //dominant-baseline central
@@ -179,11 +179,13 @@ svg
   .svg-text
     font-size $em_size
     &.svg-text-credit
-      font-size $em_size*0.6
-    &.svg-text-source
-      font-size $em_size*0.6
-    &.svg-text-title
       font-size $em_size
+      font-weight 500
+    &.svg-text-source
+      font-size $em_size
+    &.svg-text-title
+      font-size $em_size*1.2
+      font-weight 900
 
 .small
   .em-size
