@@ -173,7 +173,8 @@ var XY_yScaleSettings = React.createClass({
 					/>
 				</div>
 				{errors}
-				<p><em>Minimum and Maximum</em> set the lowest and highest values of your range; <em>Ticks</em> sets the number of values displayed on the axis; <em>Precision</em> determines how many decimal places these values will have.</p>
+				<p className='editor-documentation'>Use the <em>prefix</em> and <em>suffix</em> to label the units of the axis. For example, in "$50 million", "$" is the prefix and "million" is the suffix.</p>
+				<p className='editor-documentation'><em>Minimum and Maximum</em> set the lowest and highest values of your range; <em>Ticks</em> sets the number of values displayed on the axis; <em>Precision</em> determines how many decimal places these values will have.</p>
 			</div>
 		);
 	}

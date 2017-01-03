@@ -87,6 +87,7 @@ var ChartTypeSelctor = React.createClass({
 				className="chart-type-select"
 				value={this.props.metadata.chartType}
 			/>
+		<p className="editor-documentation"><em>XY charts</em> plot all the data on the same X and Y axes. <em>Chart grids</em> separate each series into separate X and Y axes.</p>
 		 </div>
 		);
 	}
