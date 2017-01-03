@@ -127,6 +127,7 @@ var ChartExport = React.createClass({
 				"Khula-Regular": "Khula",
 			}
 		}, function(uri) {
+			console.log(uri);
 			autoClickDownload(filename, uri);
 		});
 	},
