@@ -139,7 +139,7 @@ var defaultProps = {
 		chartType: 'xy',
 		title: "",
 		source: "",
-		credit: "Made with Chartbuilder",
+		credit: "Axios",
 		size: "auto"
 	}
 };
