@@ -121,13 +121,8 @@ var ChartExport = React.createClass({
 		var chart = this._addIDsForIllustrator(this.state.chartNode);
 		var autoClickDownload = this._autoClickDownload;
 		saveSvgAsPng.svgAsDataUri(chart, {
-			cleanFontDefs: true,
-			fontFamilyRemap: {
-				"Khula-Light": "Khula Light",
-				"Khula-Regular": "Khula",
-			}
+			cleanFontDefs: true
 		}, function(uri) {
-			console.log(uri);
 			autoClickDownload(filename, uri);
 		});
 	},
@@ -169,17 +164,6 @@ var ChartExport = React.createClass({
 					className="export-button"
 					onClick={this.downloadSVG}
 					text="SVG"
-				/>
-			);
-		}
-
-		if (this.props.enableJSONExport) {
-			chartExportButtons.push(
-				<Button
-					key="json-export"
-					className="export-button"
-					onClick={this.downloadJSON}
-					text="JSON"
 				/>
 			);
 		}
