@@ -18,7 +18,7 @@ var xy_config = {
 		"left": "left",
 		"right": "right"
 	},
-	xAxisShift: 10
+	xAxisShift: 0
 };
 
 var mixin = [
@@ -94,7 +94,7 @@ var using = {
 		line.x(function(d) {
 			if (this.x.$scale == "time" || this.x.$scale == "linear") {
 				return this.x(d[this.x.$key]);
-			} 
+			}
 			else {
 				return this.x(d[this.x.$key]) + this.x.rangeBand() / 2;
 			}
@@ -333,6 +333,7 @@ var cb_xy = d4.chart("cb-xy", function() {
 				}).length;
 
 				if (numColumns === data.length) {
+					console.log(numColumns);
 					this.container.selectAll(".xAxis .tick").attr("data-anchor", "middle");
 				}
 				if(self.x.$scale == "time") {
@@ -351,13 +352,6 @@ var cb_xy = d4.chart("cb-xy", function() {
 				var coords = help.transformCoords(axisNode.attr("transform"));
 				coords[1] = coords[1] + xy_config.xAxisShift;
 				axisNode.attr("transform","translate(" + coords + ")");
-				
-
-
-				
-
-				
-
 			});
 		})
 		.using("x-axis-label", function(label) {

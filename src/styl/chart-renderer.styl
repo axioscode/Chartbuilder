@@ -22,7 +22,7 @@ div.renderer-wrapper
 svg
   &.renderer-svg
     fill $color-bg
-    font-family $font-sans-light
+    font-family $font-sans
     text-rendering optimizeLegibility
     box-sizing border-box
     .svg-background
@@ -39,11 +39,12 @@ svg
     display none
   .axis
     .tick
-      font-family $font-sans-light
+      font-family $font-sans-regular
       &[data-anchor="middle"]
         text
           text-anchor middle
       text
+        font-family $font-sans
         fill $color-chart-axis-text
         shape-rendering crispEdges
         text-anchor middle
@@ -113,7 +114,7 @@ svg
     shape-rendering crispEdges
 
 .svg-text
-  font-family $font-sans-light
+  font-family $font-sans
   font-size $em_size
 
   tspan
@@ -128,6 +129,7 @@ svg
       font-style italic
 
   &.svg-text-credit
+    font-family $font-sans-bold
     font-size $em_size
     fill $color-chart-meta
     text-anchor start
@@ -142,7 +144,7 @@ svg
       text-anchor end
   &.svg-text-title
     fill $color-body-text
-    font-family $font-sans
+    font-family $font-sans-medium
     font-size $em_size
 
 .svg-source-pipe
@@ -152,7 +154,7 @@ svg
 
 .svg-label-text
   font-size $em_size
-  font-family $font-sans-light
+  font-family $font-sans-medium
   &.draggable
     cursor move
 
