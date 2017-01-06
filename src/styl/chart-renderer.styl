@@ -39,15 +39,16 @@ svg
     display none
   .axis
     .tick
-      font-family $font-sans-regular
+      font-family $font-sans
       &[data-anchor="middle"]
         text
           text-anchor middle
       text
-        font-family $font-sans
+        font-family $font-sans-light
         fill $color-chart-axis-text
         shape-rendering crispEdges
         text-anchor middle
+        font-size $em-size
       &:first-child
         text
           text-anchor middle
@@ -130,11 +131,11 @@ svg
 
   &.svg-text-credit
     font-family $font-sans-bold
-    font-size $em_size
+    font-size $em_size_small
     fill $color-chart-meta
     text-anchor start
   &.svg-text-source
-    font-size $em_size
+    font-size $em_size_small
     fill $color-chart-meta
     //text
       //dominant-baseline central
