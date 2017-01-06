@@ -83,6 +83,8 @@ var ChartExport = React.createClass({
 				}
 			});
 
+		chart.selectAll('.draggable').classed("draggable", false);
+
 		return chart[0][0];
 	},
 
@@ -120,9 +122,7 @@ var ChartExport = React.createClass({
 		var filename = this._makeFilename("svg");
 		var chart = this._addIDsForIllustrator(this.state.chartNode);
 		var autoClickDownload = this._autoClickDownload;
-		saveSvgAsPng.svgAsDataUri(chart, {
-			cleanFontDefs: true
-		}, function(uri) {
+		saveSvgAsPng.svgAsDataUri(chart, {}, function(uri) {
 			autoClickDownload(filename, uri);
 		});
 	},
