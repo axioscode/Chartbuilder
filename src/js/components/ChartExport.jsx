@@ -124,15 +124,7 @@ var ChartExport = React.createClass({
 		var chart = this._addIDsForIllustrator(this.state.chartNode);
 		console.log(chart);
 		var autoClickDownload = this._autoClickDownload;
-		saveSvgAsPng.svgAsDataUri(chart, {
-			cleanFontDefs: true,
-			fontFamilyRemap: {
-				"Gordita-Light": "Gordita Light",
-				"Gordita-Regular": "Gordita Regular",
-				"Gordita-Medium": "Gordita Medium",
-				"Gordita-Black": "Gordita Black",
-			}
-		}, function(uri) {
+		saveSvgAsPng.svgAsDataUri(chart, {}, function(uri) {
 			console.log(uri);
 			autoClickDownload(filename, uri);
 		});
