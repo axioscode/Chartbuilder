@@ -119,7 +119,6 @@ var defaultProps = {
 		id: null,
 		chartType: "chartgrid",
 		title: "",
-		subhead: "This is a subhead",
 		source: "",
 		credit: "Made with Chartbuilder",
 		size: "auto"
