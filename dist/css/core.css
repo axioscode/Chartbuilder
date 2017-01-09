@@ -397,7 +397,7 @@ span.step-number {
   line-height: 1.75;
 }
 .editor-options {
-  font-family: 'gordita-regular', Helvetica, sans-serif;
+  font-family: 'Gordita-Regular', Helvetica, sans-serif;
   margin: 50px 0;
   display: block;
   width: 100%;
@@ -436,7 +436,7 @@ span.step-number {
   background-color: #f1f1f1;
   width: 100%;
   text-align: center;
-  font-family: 'gordita-regular', Helvetica, sans-serif;
+  font-family: 'Gordita-Regular', Helvetica, sans-serif;
 }
 .data-input .file-drop p {
   font-size: 2em;
@@ -630,7 +630,7 @@ span.step-number {
 }
 .editor-label {
   font-size: 16px;
-  font-family: 'gordita-regular', Helvetica, sans-serif;
+  font-family: 'Gordita-Regular', Helvetica, sans-serif;
 }
 .load-localstorage {
   display: none;
@@ -748,7 +748,7 @@ div.renderer-wrapper {
 }
 svg.renderer-svg {
   fill: #fff;
-  font-family: 'gordita-regular', Helvetica, sans-serif;
+  font-family: 'Gordita-Regular', Helvetica, sans-serif;
   text-rendering: optimizeLegibility;
   box-sizing: border-box;
 }
@@ -769,16 +769,17 @@ svg.renderer-svg tspan {
   display: none;
 }
 .d4 .axis .tick {
-  font-family: $font-sans-regular;
+  font-family: 'Gordita-Regular', Helvetica, sans-serif;
 }
 .d4 .axis .tick[data-anchor="middle"] text {
   text-anchor: middle;
 }
 .d4 .axis .tick text {
-  font-family: 'gordita-regular', Helvetica, sans-serif;
+  font-family: 'Gordita-Light', Helvetica, sans-serif;
   fill: #666;
   shape-rendering: crispEdges;
   text-anchor: middle;
+  font-size: $em-size;
 }
 .d4 .axis .tick:first-child text {
   text-anchor: middle;
@@ -812,7 +813,7 @@ svg.renderer-svg tspan {
   fill: #666;
 }
 .d4 .concealer-label {
-  font-family: 'gordita-light', Helvetica, sans-serif;
+  font-family: 'Gordita-Light', Helvetica, sans-serif;
 }
 .d4 .concealer-label text {
   fill: #666;
@@ -836,7 +837,7 @@ svg.renderer-svg tspan {
   stroke-linejoin: round;
 }
 .d4 .margins .label {
-  font-family: 'gordita-light', Helvetica, sans-serif;
+  font-family: 'Gordita-Light', Helvetica, sans-serif;
 }
 .d4 .column-label {
   fill: #666;
@@ -848,28 +849,28 @@ svg.renderer-svg tspan {
   shape-rendering: crispEdges;
 }
 .svg-text {
-  font-family: 'gordita-regular', Helvetica, sans-serif;
+  font-family: 'Gordita-Regular', Helvetica, sans-serif;
   font-size: 14px;
 }
 .svg-text tspan.em {
   font-style: italic;
 }
 .svg-text tspan.strong {
-  font-family: 'gordita-black', Helvetica, sans-serif;
+  font-family: 'Gordita-Black', Helvetica, sans-serif;
 }
 .svg-text tspan.strong .em,
 .svg-text tspan.em .strong {
-  font-family: 'gordita-black', Helvetica, sans-serif;
+  font-family: 'Gordita-Black', Helvetica, sans-serif;
   font-style: italic;
 }
 .svg-text.svg-text-credit {
-  font-family: 'gordita-black', Helvetica, sans-serif;
-  font-size: 14px;
+  font-family: 'Gordita-Black', Helvetica, sans-serif;
+  font-size: 10px;
   fill: #008dc8;
   text-anchor: start;
 }
 .svg-text.svg-text-source {
-  font-size: 14px;
+  font-size: 10px;
   fill: #008dc8;
 }
 .svg-text.svg-text-source.left {
@@ -880,7 +881,7 @@ svg.renderer-svg tspan {
 }
 .svg-text.svg-text-title {
   fill: #666;
-  font-family: 'gordita-medium', Helvetica, sans-serif;
+  font-family: 'Gordita-Medium', Helvetica, sans-serif;
   font-size: 14px;
 }
 .svg-source-pipe {
@@ -890,7 +891,7 @@ svg.renderer-svg tspan {
 }
 .svg-label-text {
   font-size: 14px;
-  font-family: 'gordita-medium', Helvetica, sans-serif;
+  font-family: 'Gordita-Medium', Helvetica, sans-serif;
 }
 .svg-label-text.draggable {
   cursor: move;

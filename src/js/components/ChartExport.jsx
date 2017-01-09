@@ -104,10 +104,11 @@ var ChartExport = React.createClass({
 
 	downloadPNG: function() {
 		filename = this._makeFilename("png");
-		saveSvgAsPng.saveSvgAsPng(this.state.chartNode, filename, { scale: 2.0 });
+		saveSvgAsPng.saveSvgAsPng(this.state.chartNode, filename, { scale: 2.5 });
 	},
 
 	_autoClickDownload: function(filename, href) {
+		console.log("AUTOCLICK");
 		var a = document.createElement('a');
 		a.download = filename;
 		a.href = href;
@@ -121,8 +122,18 @@ var ChartExport = React.createClass({
 	downloadSVG: function() {
 		var filename = this._makeFilename("svg");
 		var chart = this._addIDsForIllustrator(this.state.chartNode);
+		console.log(chart);
 		var autoClickDownload = this._autoClickDownload;
-		saveSvgAsPng.svgAsDataUri(chart, {}, function(uri) {
+		saveSvgAsPng.svgAsDataUri(chart, {
+			cleanFontDefs: true,
+			fontFamilyRemap: {
+				"Gordita-Light": "Gordita Light",
+				"Gordita-Regular": "Gordita Regular",
+				"Gordita-Medium": "Gordita Medium",
+				"Gordita-Black": "Gordita Black",
+			}
+		}, function(uri) {
+			console.log(uri);
 			autoClickDownload(filename, uri);
 		});
 	},
