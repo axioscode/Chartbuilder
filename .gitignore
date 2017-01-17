@@ -12,3 +12,4 @@ src/fonts
 
 config.json
 .awspublish-*
+aws-config.json

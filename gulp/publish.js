@@ -22,6 +22,8 @@ gulp.task('publish',['build'], function(done) {
 		secretAccessKey: aws.Credentials.SecretAccessKey
 	});
 
+	console.log(publisher);
+
 	return gulp.src(['build/**/*.{html,css,js}'])
 		.pipe(rename(function (path) {
 			if(aws.FolderPath) {
