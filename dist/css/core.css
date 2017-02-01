@@ -760,7 +760,7 @@ svg.renderer-svg tspan {
   line-height: 1em;
 }
 .d4 {
-  font-size: 14px;
+  font-size: 16px;
 }
 .d4 .leftAxis path.domain {
   display: none;
@@ -769,13 +769,13 @@ svg.renderer-svg tspan {
   display: none;
 }
 .d4 .axis .tick {
-  font-family: 'Gordita-Regular', Helvetica, sans-serif;
+  font-family: 'Liberation Mono', courier, monospace;
 }
 .d4 .axis .tick[data-anchor="middle"] text {
   text-anchor: middle;
 }
 .d4 .axis .tick text {
-  font-family: 'Gordita-Light', Helvetica, sans-serif;
+  font-family: 'Liberation Mono', courier, monospace;
   fill: #666;
   shape-rendering: crispEdges;
   text-anchor: middle;
@@ -804,10 +804,10 @@ svg.renderer-svg tspan {
   text-anchor: end;
 }
 .d4 .axis[data-scale="time"] .tick:not([data-anchor="middle"]) text {
-  text-anchor: start;
+  text-anchor: middle;
 }
 .d4 .axis[data-scale="time"] .tick:first-child text {
-  text-anchor: start;
+  text-anchor: middle;
 }
 .d4 .xAxislabel {
   fill: #666;
@@ -850,7 +850,7 @@ svg.renderer-svg tspan {
 }
 .svg-text {
   font-family: 'Gordita-Regular', Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
 }
 .svg-text tspan.em {
   font-style: italic;
@@ -865,12 +865,12 @@ svg.renderer-svg tspan {
 }
 .svg-text.svg-text-credit {
   font-family: 'Gordita-Black', Helvetica, sans-serif;
-  font-size: 10px;
+  font-size: 12px;
   fill: #008dc8;
   text-anchor: start;
 }
 .svg-text.svg-text-source {
-  font-size: 10px;
+  font-size: 12px;
   fill: #008dc8;
 }
 .svg-text.svg-text-source.left {
@@ -880,9 +880,10 @@ svg.renderer-svg tspan {
   text-anchor: end;
 }
 .svg-text.svg-text-title {
-  fill: #666;
+  fill: #4a4a4a;
   font-family: 'Gordita-Medium', Helvetica, sans-serif;
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: normal;
 }
 .svg-source-pipe {
   stroke: #008dc8;
@@ -890,7 +891,7 @@ svg.renderer-svg tspan {
   stroke-width: 0.8px;
 }
 .svg-label-text {
-  font-size: 14px;
+  font-size: 16px;
   font-family: 'Gordita-Medium', Helvetica, sans-serif;
 }
 .svg-label-text.draggable {
@@ -905,82 +906,82 @@ svg.renderer-svg tspan {
   visibility: hidden;
 }
 .medium .em-size {
-  font-size: 14px;
+  font-size: 16px;
 }
 .medium .d4 {
-  font-size: 14px;
+  font-size: 16px;
 }
 .medium .d4 .margins .line path,
 .medium .d4 .margins .other-line path {
   stroke-width: 2px;
 }
 .medium .svg-text {
-  font-size: 14px;
+  font-size: 16px;
 }
 .medium .svg-text.svg-text-credit {
-  font-size: 14px;
+  font-size: 16px;
   font-weight: 900;
 }
 .medium .svg-text.svg-text-source {
-  font-size: 8.4px;
+  font-size: 9.6px;
 }
 .medium .svg-text.svg-text-title {
-  font-size: 16.8px;
+  font-size: 19.2px;
   font-weight: 900;
 }
 .small .em-size {
-  font-size: 10px;
+  font-size: 12px;
 }
 .small .d4 {
-  font-size: 10px;
+  font-size: 12px;
 }
 .small .d4 .margins .line path,
 .small .d4 .margins .other-line path {
   stroke-width: 2px;
 }
 .small .svg-text {
-  font-size: 10px;
+  font-size: 12px;
 }
 .small .svg-text.svg-text-credit {
-  font-size: 7px;
+  font-size: 8px;
 }
 .small .svg-text.svg-text-source {
-  font-size: 7px;
+  font-size: 8px;
 }
 .small .svg-text.svg-text-pipe text {
   dominant-baseline: central;
-  font-size: 8.4px;
+  font-size: 9.6px;
 }
 .small .svg-text.svg-text-title {
-  font-size: 10px;
+  font-size: 12px;
 }
 .small .svg-label-text {
-  font-size: 10px;
+  font-size: 12px;
 }
 .large .em-size {
-  font-size: 14px;
+  font-size: 16px;
 }
 .large .d4 {
-  font-size: 14px;
+  font-size: 16px;
 }
 .large .d4 .margins .line path,
 .large .d4 .margins .other-line path {
   stroke-width: 4px;
 }
 .large .svg-text {
-  font-size: 14px;
+  font-size: 16px;
 }
 .large .svg-text.svg-text-credit {
-  font-size: 8.4px;
+  font-size: 9.6px;
 }
 .large .svg-text.svg-text-source {
-  font-size: 8.4px;
+  font-size: 9.6px;
 }
 .large .svg-text.svg-text-title {
-  font-size: 14px;
+  font-size: 16px;
 }
 .large .svg-label-text {
-  font-size: 14px;
+  font-size: 16px;
 }
 .cb-credit-logo {
   fill: #008dc8;
