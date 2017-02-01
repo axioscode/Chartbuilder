@@ -184,7 +184,7 @@ gulp.task("watch", [
 
 // build for production
 gulp.task("_build", [
-	"browserify:prod",
+	"browserify:dev",
 	"stylus",
 	"stylus:core",
 	"copy-htdocs",

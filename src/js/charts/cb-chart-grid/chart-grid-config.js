@@ -86,7 +86,7 @@ var defaultProps = {
 			dateSettings: {
 				dateFrequency: "auto",
 				dateFormat: "auto",
-				inputTZ: null,
+				inputTZ: "Z",
 				displayTZ: "as-entered"
 			},
 			numericSettings: {

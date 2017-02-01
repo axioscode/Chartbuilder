@@ -1,6 +1,6 @@
-$em_size = 14px
-$em_size_small = 10px
-$em_size_large = 20px
+$em_size = 16px
+$em_size_small = 12px
+$em_size_large = 22px
 
 div.renderer-wrapper
   font-smoothing antialiased
@@ -39,12 +39,12 @@ svg
     display none
   .axis
     .tick
-      font-family $font-sans
+      font-family $font-mono
       &[data-anchor="middle"]
         text
           text-anchor middle
       text
-        font-family $font-sans-light
+        font-family $font-mono
         fill $color-chart-axis-text
         shape-rendering crispEdges
         text-anchor middle
@@ -74,10 +74,10 @@ svg
     &[data-scale="time"]
       .tick:not([data-anchor="middle"])
         text
-          text-anchor start
+          text-anchor middle
       .tick:first-child
         text
-          text-anchor start
+          text-anchor middle
   .xAxislabel
     fill $color-chart-axis-text
   .concealer-label
@@ -144,9 +144,10 @@ svg
     &.right
       text-anchor end
   &.svg-text-title
-    fill $color-body-text
+    fill $color-chart-title-text
     font-family $font-sans-medium
     font-size $em_size
+    font-weight normal
 
 .svg-source-pipe
 	stroke $color-chart-meta

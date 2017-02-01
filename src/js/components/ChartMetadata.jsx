@@ -41,8 +41,8 @@ var chart_sizes = [
 
 var text_input_values = [
 	{ name: "title", content: "Title", isRequired: true },
-	{ name: "credit", content: "Credit" },
-	{ name: "source", content: "Source" }
+	// { name: "credit", content: "Credit" },
+	// { name: "source", content: "Source" }
 ];
 
 /**
@@ -61,8 +61,8 @@ var ChartMetadata = React.createClass({
 		metadata: PropTypes.shape({
 			chartType: PropTypes.string.isRequired,
 			size: PropTypes.string.isRequired,
-			source: PropTypes.string,
-			credit: PropTypes.string,
+			// source: PropTypes.string,
+			// credit: PropTypes.string,
 			title: PropTypes.string
 		}),
 		stepNumber: PropTypes.string,
@@ -105,7 +105,8 @@ var ChartMetadata = React.createClass({
 			<div className="editor-options">
 				<h2>
 					<span className="step-number">{this.props.stepNumber}</span>
-					<span>Set title, source, credit and size</span>
+					{/*<span>Set title, source, credit and size</span>*/}
+					<span>Set title and size</span>
 				</h2>
 				{textInputs}
 				{this.props.additionalComponents}

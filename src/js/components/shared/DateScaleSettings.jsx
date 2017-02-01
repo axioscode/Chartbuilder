@@ -158,9 +158,11 @@ var DateScaleSettings = React.createClass({
 		this.props.onUpdate(scale);
 	},
 
-	_showTimezoneSettings: function(dateFrequency) {
-		return (this._config.showTimezoneFormats.indexOf(dateFrequency) > -1);
-	},
+	// _showTimezoneSettings: function(dateFrequency) {
+	// 	return (this._config.showTimezoneFormats.indexOf(dateFrequency) > -1);
+	// },
+
+	_showTimezoneSettings: function() { return false; },
 
 	_generateTimezoneText: function(curMonth) {
 		var tz_text = "";
@@ -187,13 +189,15 @@ var DateScaleSettings = React.createClass({
 		if (showTimezoneSettings) {
 			var tz_text = this._generateTimezoneText(this.props.now.getMonth());
 
+			// {/* options={this.localizeTimeZoneOptions(this._config.timeZoneOptions, this.props.nowOffset)} */}
+
 			timezoneSettings = (
 				<div>
 					<div className="labelled-dropdown">
 						<label className="editor-label date-setting">The timezone of your data is</label>
 						<Dropdown
 							onChange={this._handleDateScaleUpdate.bind(null, "inputTZ")}
-							options={this.localizeTimeZoneOptions(this._config.timeZoneOptions, this.props.nowOffset)}
+							options={this.localizeTimeZoneOptions(this._config.timeZoneOptions, 0)}
 							value={dateSettings.inputTZ}
 						/>
 					</div>

@@ -56,7 +56,7 @@ var display = {
 	padding: {
 		top: 0,
 		right: 0,
-		bottom: "3em",
+		bottom: "2em",
 		left: 0
 	}
 };
@@ -95,7 +95,7 @@ var defaultProps = {
 			dateSettings: {
 				dateFrequency: "auto",
 				dateFormat: "auto",
-				inputTZ: null,
+				inputTZ: "Z",
 				displayTZ: "as-entered"
 			},
 			numericSettings: {
