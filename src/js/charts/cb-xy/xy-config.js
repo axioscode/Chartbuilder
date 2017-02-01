@@ -55,7 +55,7 @@ var display = {
 		left: "0.25em"
 	},
 	padding: {
-		top: 0,
+		top: "3em",
 		right: 0,
 		bottom: "2em",
 		left: 0
@@ -116,7 +116,7 @@ var defaultProps = {
 			}
 		],
 		extraPadding: {
-			top: 0,
+			top: "2em",
 			right: 0,
 			bottom: 0,
 			left: 0
