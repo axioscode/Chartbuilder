@@ -780,6 +780,9 @@ svg.renderer-svg tspan {
   shape-rendering: crispEdges;
   text-anchor: middle;
   font-size: $em-size;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 .d4 .axis .tick:first-child text {
   text-anchor: middle;
@@ -882,6 +885,12 @@ svg.renderer-svg tspan {
 .svg-text.svg-text-title {
   fill: #4a4a4a;
   font-family: 'Gordita-Medium', Helvetica, sans-serif;
+  font-size: 19.2px;
+  font-weight: normal;
+}
+.svg-text.svg-text-subtitle {
+  fill: #666;
+  font-family: 'Liberation Mono', courier, monospace;
   font-size: 16px;
   font-weight: normal;
 }
