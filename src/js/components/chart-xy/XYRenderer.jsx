@@ -39,9 +39,6 @@ var help = require("../../util/helper.js");
 
 var scaleNames = ["primaryScale", "secondaryScale"];
 
-// hack FOR SUBTITLES
-var subtitleHeight = 20;
-
 /**
  * ### Component that renders XY (line, column, dot) charts
  * @property {boolean} editable - Allow the rendered component to interacted with and edited
@@ -101,7 +98,7 @@ var XYRenderer = React.createClass({
 	_getYOffset: function(props, opts) {
 		var offset = props.displayConfig.margin.top;
 		if (opts.hasTitle) { offset += props.displayConfig.afterTitle; }
-		if (opts.hasSubtitle) { offset += subtitleHeight; }
+		if (opts.hasSubtitle) { offset += props.displayConfig.afterSubtitle; }
 		return offset;
 	},
 
@@ -904,7 +901,7 @@ function computePadding(props) {
 	if (props.hasTitle) {
 		_top += displayConfig.afterTitle;
 	}
-	
+
 	if (props.hasTitle) {
 		_top += 20;
 	}

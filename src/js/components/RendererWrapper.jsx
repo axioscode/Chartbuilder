@@ -272,11 +272,12 @@ var RendererWrapper = React.createClass({
 			}
 
 			if (metadata.subtitle && metadata.subtitlesubtitle !== "") {
+				let subtitleTop = translate.top * 2.5;
 				subtitle = (
 					<SvgText
 						text={metadata.subtitle}
 						key="subtitle"
-						translate={[translate.left, 40]}
+						translate={[translate.left, subtitleTop]}
 						align="top"
 						className="svg-text-subtitle"
 					/>

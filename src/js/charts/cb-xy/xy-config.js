@@ -37,7 +37,7 @@ var display = {
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
 	afterTitle: "1.6em",
-	afterSubtitle: "1.6em",
+	afterSubtitle: "1em",
 	afterLegend: "1.6em",
 	blockerRectOffset: "0.3em",
 	columnPaddingCoefficient: 0.3,
