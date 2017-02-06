@@ -171,6 +171,17 @@ var ChartExport = React.createClass({
 			);
 		}
 
+		if (this.props.enableJSONExport) {
+			chartExportButtons.push(
+				<Button
+					key="json-export"
+					className="export-button"
+					onClick={this.downloadJSON}
+					text="JSON"
+				/>
+			);
+		}
+
 		return (
 			<div className="editor-options">
 				<h2><span className="step-number">{this.props.stepNumber}</span><span>Export your chart</span></h2>
