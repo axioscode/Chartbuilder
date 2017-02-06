@@ -104,7 +104,7 @@ var ChartExport = React.createClass({
 
 	downloadPNG: function() {
 		filename = this._makeFilename("png");
-		saveSvgAsPng.saveSvgAsPng(this.state.chartNode, filename, { scale: 2.5 });
+		saveSvgAsPng.saveSvgAsPng(this.state.chartNode, filename, { scale: 3 });
 	},
 
 	_autoClickDownload: function(filename, href) {
@@ -167,6 +167,17 @@ var ChartExport = React.createClass({
 					className="export-button"
 					onClick={this.downloadSVG}
 					text="SVG"
+				/>
+			);
+		}
+
+		if (this.props.enableJSONExport) {
+			chartExportButtons.push(
+				<Button
+					key="json-export"
+					className="export-button"
+					onClick={this.downloadJSON}
+					text="JSON"
 				/>
 			);
 		}

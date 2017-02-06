@@ -95,12 +95,11 @@ var XYRenderer = React.createClass({
 
 	// Determine how far down vertically the labels should be placed, depending
 	// on presence (or not) of a title
-	_getYOffset: function(props, hasTitle) {
-		if (hasTitle) {
-			return props.displayConfig.margin.top + props.displayConfig.afterTitle;
-		} else {
-			return props.displayConfig.margin.top;
-		}
+	_getYOffset: function(props, opts) {
+		var offset = props.displayConfig.margin.top;
+		if (opts.hasTitle) { offset += props.displayConfig.afterTitle; }
+		if (opts.hasSubtitle) { offset += props.displayConfig.afterSubtitle; }
+		return offset;
 	},
 
 	componentWillReceiveProps: function(nextProps) {
@@ -119,7 +118,8 @@ var XYRenderer = React.createClass({
 		var labelComponents;
 		var dimensions = this.props.dimensions;
 		var hasTitle = (this.props.metadata.title.length > 0 && this.props.showMetadata);
-		var yOffset = this._getYOffset(this.props, hasTitle);
+		var hasSubtitle = (this.props.metadata.subtitle.length > 0 && this.props.showMetadata);
+		var yOffset = this._getYOffset(this.props, {'hasTitle': hasTitle, 'hasSubtitle': hasSubtitle});
 
 		// Maintain space between legend and chart area unless all legend labels
 		// have been dragged
@@ -218,6 +218,7 @@ var XYRenderer = React.createClass({
 					chartProps={_chartProps}
 					allLabelsDragged={allLabelsDragged}
 					hasTitle={hasTitle}
+					hasSubtitle={hasSubtitle}
 					yOffset={yOffset}
 					displayConfig={this.props.displayConfig}
 					styleConfig={this.props.styleConfig}
@@ -239,6 +240,7 @@ var XYRenderer = React.createClass({
 					chartAreaDimensions={chartAreaDimensions}
 					data={dataWithSettings}
 					hasTitle={hasTitle}
+					hasSubtitle={hasSubtitle}
 					yOffset={yOffset}
 					scale={scale}
 					editable={this.props.editable}
@@ -282,6 +284,7 @@ var XYChart = React.createClass({
 	propTypes: {
 		chartProps: PropTypes.object.isRequired,
 		hasTitle: PropTypes.bool.isRequired,
+		hasSubtitle: PropTypes.bool.isRequired,
 		yOffset: PropTypes.number.isRequired,
 		displayConfig: PropTypes.object.isRequired,
 		styleConfig: PropTypes.object.isRequired,
@@ -404,6 +407,7 @@ var XYLabels = React.createClass({
 		chartProps: PropTypes.object.isRequired,
 		editable: PropTypes.bool,
 		hasTitle: PropTypes.bool.isRequired,
+		hasSubtitle: PropTypes.bool.isRequired,
 		displayConfig: PropTypes.object.isRequired,
 		styleConfig: PropTypes.object.isRequired,
 		data: PropTypes.arrayOf(PropTypes.object).isRequired,
@@ -897,6 +901,11 @@ function computePadding(props) {
 	if (props.hasTitle) {
 		_top += displayConfig.afterTitle;
 	}
+
+	if (props.hasTitle) {
+		_top += 20;
+	}
+
 
 	// Reduce top padding if all labels or dragged or there is only one series,
 	// meaning no label will be shown
