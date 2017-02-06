@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	ReactDOM.render(
 		<Chartbuilder
 			showMobilePreview={false}
-			enableJSONExport={false}
+			enableJSONExport={true}
 		/>,
 	container );
 
