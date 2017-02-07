@@ -746,14 +746,18 @@ function drawXY(el, state) {
 				var numColumns = filter(data, function(d) {
 					return d.type === "column";
 				}).length;
-
+				var currInnerTickSize = -(this.height - this.padding.bottom - state.padding.top);
 				// Don't display the x axis grid tick if all series are columns
 				if (numColumns === data.length) {
-					axis.innerTickSize(styleConfig.overtick_bottom);
+					axis.innerTickSize(currInnerTickSize);
 				} else {
-					axis.innerTickSize(styleConfig.overtick_bottom);
+					axis.innerTickSize(currInnerTickSize);
 					this.container.selectAll(".xAxis .tick").attr("data-anchor", "start");
 				}
+				axis.tickPadding(20);
+				this.container
+						.selectAll(".xAxis .tick line")
+						.attr("y1", 10);
 			});
 
 			if (dateSettings) {
