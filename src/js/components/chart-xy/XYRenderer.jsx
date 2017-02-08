@@ -385,8 +385,6 @@ var XYLabels = React.createClass({
 	propTypes: {
 		chartProps: PropTypes.object.isRequired,
 		editable: PropTypes.bool,
-		hasTitle: PropTypes.bool.isRequired,
-		hasSubtitle: PropTypes.bool.isRequired,
 		displayConfig: PropTypes.object.isRequired,
 		styleConfig: PropTypes.object.isRequired,
 		xScale: PropTypes.func.isRequired,
