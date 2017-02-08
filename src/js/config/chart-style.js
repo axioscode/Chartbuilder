@@ -18,13 +18,13 @@ var chart_style = {
 	overtick_top: "0.8em",
 	overtick_bottom: "0.8em",
 	fontFamilies: { // necessary for calculating text width before render
-		axes: "Gordita-Light",
+		axes: "Liberation Mono",
 		labels: "Gordita-Regular"
 	},
 	fontSizes: {
-		large: "1.2em",
-		medium: "1em",
-		small: "0.8em"
+		large: "1em",
+		medium: "0.8em",
+		small: "0.6em"
 	},
 	dotRadiusFactor: 0.007, // size of dot as % of width
 	numColors: 9,
