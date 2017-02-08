@@ -1,12 +1,12 @@
 {
   "name": "chartbuilder",
-  "version": "2.6.7",
+  "version": "3.0.1",
   "description": "Easily create beautiful charts",
   "main": "src/js/index.js",
   "scripts": {
     "test:jsx": "browserify -t rewireify test/jsx/index-jsx.js | tap-closer | smokestack | tap-spec",
     "test:js": "browserify test/index.js | tap-closer | smokestack | tap-spec",
-    "test": "npm run test:js && npm run test:jsx",
+    "test": "npm run test:js",
     "docs": "./node_modules/.bin/documentation --github --format html -o api-docs",
     "test-page": "gulp test-page",
     "dev": "gulp",
@@ -19,23 +19,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Quartz/Chartbuilder"
-  },
-  "browser": {
-    "d4": "./node_modules/d4/d4.js"
-  },
-  "browserify": {
-    "transform": [
-      "browserify-shim",
-      "reactify"
-    ]
-  },
-  "browserify-shim": {
-    "d4": {
-      "exports": "d4",
-      "depends": [
-        "d3:d3"
-      ]
-    }
   },
   "author": "Quartz",
   "contributors": [
@@ -53,7 +36,7 @@
     "chartbuilder-ui": "~1.5.4",
     "classnames": "^2.2.1",
     "d3": "^3.5.5",
-    "d4": "git://github.com/yanofsky/d4.git",
+    "d3-scale": "^1.0.4",
     "flux": "~2.1.1",
     "lodash": "^4.0.0",
     "markdown-it": "^6.0.0",
@@ -67,9 +50,10 @@
     "sugar-date": "^1.5.1"
   },
   "devDependencies": {
+    "babel-preset-react": "^6.22.0",
+    "babelify": "^7.3.0",
     "browser-sync": "2.x.x",
     "browserify": "^13.0.0",
-    "browserify-shim": "^3.8.0",
     "del": "2.2.0",
     "documentation": "^3.0.4",
     "envify": "^3.2.0",

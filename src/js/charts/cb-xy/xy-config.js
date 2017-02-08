@@ -36,13 +36,20 @@ var display = {
 	labelXMargin: "0.6em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
-	afterTitle: "1.6em",
+	afterSubtitle: "1em",
+	afterTitle: "1.4em",
 	afterSubtitle: "1em",
 	afterLegend: "1.6em",
 	blockerRectOffset: "0.3em",
-	columnPaddingCoefficient: 0.3,
+	lineMarkThreshold: 10, // render marks (dots) on lines if data < N
+	columnOuterPadding: 0.01, // % of width to pad for columns
+	columnInnerPadding: 0, // % of col group width to pad btwn each
 	minPaddingOuter: "1em",
 	bottomPaddingWithoutFooter: "3em",
+	yAxisOrient: {
+		primaryScale: "left",
+		secondaryScale: "right",
+	},
 	aspectRatio: {
 		wide: (9 / 16),
 		longSpot: (4 / 3),
@@ -57,7 +64,7 @@ var display = {
 	padding: {
 		top: "3em",
 		right: 0,
-		bottom: "2em",
+		bottom: "3.5em",
 		left: 0
 	}
 };
