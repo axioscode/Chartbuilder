@@ -323,7 +323,7 @@ var XYRenderer = React.createClass({
 			>
 				<VerticalGridLines
 					tickValues={xAxis.tickValues}
-					y1={chartAreaDimensions.height}
+					y1={margin.top}
 					y2={chartAreaDimensions.height + styleConfig.overtick_bottom}
 				/>
 				<HorizontalGridLines

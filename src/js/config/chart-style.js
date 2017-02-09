@@ -16,14 +16,14 @@
  */
 var chart_style = {
 	overtick_top: "0.8em",
-	overtick_bottom: "0.8em",
+	overtick_bottom: 10,
 	fontFamilies: { // necessary for calculating text width before render
 		axes: "Liberation Mono",
-		labels: "Gordita-Regular"
+		labels: "Gordita-Medium"
 	},
 	fontSizes: {
-		large: "1em",
-		medium: "0.8em",
+		large: "0.7em",
+		medium: "0.65em",
 		small: "0.6em"
 	},
 	dotRadiusFactor: 0.007, // size of dot as % of width

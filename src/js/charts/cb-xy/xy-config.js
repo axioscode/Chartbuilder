@@ -36,11 +36,9 @@ var display = {
 	labelXMargin: "0.6em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
-	afterSubtitle: "1em",
 	afterTitle: "1.4em",
-	afterSubtitle: "1em",
-	afterLegend: "1.6em",
-	blockerRectOffset: "0.3em",
+	afterLegend: "1em",
+	blockerRectOffset: "0.2em",
 	lineMarkThreshold: 10, // render marks (dots) on lines if data < N
 	columnOuterPadding: 0.01, // % of width to pad for columns
 	columnInnerPadding: 0, // % of col group width to pad btwn each
@@ -59,12 +57,12 @@ var display = {
 		top: "0.8em",
 		right: "0.25em",
 		bottom: "0.15em",
-		left: "0.25em"
+		left: "0.5em"
 	},
 	padding: {
-		top: "3em",
-		right: 0,
-		bottom: "3.5em",
+		top: 0,
+		right: "0.25em",
+		bottom: "1.5em",
 		left: 0
 	}
 };
@@ -123,7 +121,7 @@ var defaultProps = {
 			}
 		],
 		extraPadding: {
-			top: "2em",
+			top: 0,
 			right: 0,
 			bottom: 0,
 			left: 0
