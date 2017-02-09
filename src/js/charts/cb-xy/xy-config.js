@@ -50,7 +50,7 @@ var display = {
 		secondaryScale: "right",
 	},
 	aspectRatio: {
-		wide: (9 / 16),
+		wide: (1 / 2),
 		longSpot: (4 / 3),
 		smallSpot: (3 / 4)
 	},

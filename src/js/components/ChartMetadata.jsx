@@ -41,7 +41,7 @@ var chart_sizes = [
 
 var text_input_values = [
 	{ name: "title", content: "Title", isRequired: true },
-	{ name: "subtitle", content: "Subtitle", isRequired: true }
+	{ name: "subtitle", content: "Subtitle", isRequired: false }
 ];
 
 /**
@@ -105,15 +105,14 @@ var ChartMetadata = React.createClass({
 				<h2>
 					<span className="step-number">{this.props.stepNumber}</span>
 					{/*<span>Set title, source, credit and size</span>*/}
-					<span>Set title and size</span>
+					<span>Set title and subtitle</span>
 				</h2>
 				{textInputs}
 				{this.props.additionalComponents}
-				<ButtonGroup
+				{/*<ButtonGroup
 					buttons={chart_sizes}
 					onClick={this._handleMetadataUpdate.bind(null, "size")}
-					value={metadata.size}
-				/>
+					value={metadata.size}/>*/}
 			</div>
 		);
 	}
