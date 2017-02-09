@@ -25,6 +25,9 @@ var ChartConfig = require("../ChartConfig");
 */
 var display = {
 	afterTitle: "1.6em", // distance between top of title and top of legend or chart
+	afterSubtitle: "1.25em",
+	beforeLegend: "0.8em",
+	legendHeightToRemove: "0.625em",
 	afterLegend: "0.8em", // distance between top of legend and top of chart
 	blockerRectOffset: "0.25em", // distance between text and background blocker rect
 	barHeight: "1.9em", // height of each bars
@@ -124,6 +127,7 @@ var defaultProps = {
 		id: null,
 		chartType: "chartgrid",
 		title: "",
+		subtitle: "",
 		source: "",
 		credit: "Made with Chartbuilder",
 		size: "auto"

@@ -245,6 +245,7 @@ var ChartGridXY = React.createClass({
 				metadata={props.metadata}
 				displayConfig={displayConfig}
 				styleConfig={props.styleConfig}
+				needsLabelOffset={false}
 			>
 			<g
 				className="grid-wrapper"
