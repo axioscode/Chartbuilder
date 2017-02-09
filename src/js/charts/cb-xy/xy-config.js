@@ -146,8 +146,8 @@ var defaultProps = {
 	 */
 	metadata: {
 		chartType: 'xy',
-		title: "this is a title",
-		subtitle: "this is subtitle",
+		title: "",
+		subtitle: "",
 		source: "",
 		credit: "",
 		size: "auto"
