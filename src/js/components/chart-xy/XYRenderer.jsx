@@ -307,6 +307,7 @@ var XYRenderer = React.createClass({
 			metadata={this.props.metadata}
 			displayConfig={displayConfig}
 			styleConfig={this.props.styleConfig}
+			needsLabelOffset={needsLabelOffset}
 		>
 			{/* main chart area */}
 			<Chart
@@ -439,6 +440,7 @@ var XYLabels = React.createClass({
 				}
 			}, this);
 		}
+
 		return labelYMax;
 	},
 
@@ -552,6 +554,7 @@ var XYLabels = React.createClass({
 		if (!props.needsLabelOffset) {
 			translateY = 0 - displayConfig.afterLegend;
 		}
+
 
 		return (
 			<g

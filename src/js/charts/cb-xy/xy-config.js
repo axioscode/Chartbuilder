@@ -36,9 +36,11 @@ var display = {
 	labelXMargin: "0.5em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
-	afterTitle: "1.4em",
+	afterTitle: "1.25em",
 	afterSubtitle: "1.25em",
-	afterLegend: "1em",
+	beforeLegend: "0.25em",
+	legendHeightToRemove: "0.625em",
+	afterLegend: "0.25em",
 	blockerRectOffset: "0.5em",
 	lineMarkThreshold: 10, // render marks (dots) on lines if data < N
 	columnOuterPadding: 0.01, // % of width to pad for columns
@@ -144,8 +146,8 @@ var defaultProps = {
 	 */
 	metadata: {
 		chartType: 'xy',
-		title: "",
-		subtitle: "",
+		title: "this is a title",
+		subtitle: "this is subtitle",
 		source: "",
 		credit: "",
 		size: "auto"

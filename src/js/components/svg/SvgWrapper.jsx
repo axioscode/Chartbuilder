@@ -10,7 +10,8 @@ var SvgWrapper = React.createClass({
 		outerDimensions: PropTypes.object,
 		metadata: PropTypes.object,
 		margin: PropTypes.object,
-		displayConfig: PropTypes.object
+		displayConfig: PropTypes.object,
+		needsLabelOffset: PropTypes.bool
 	},
 
 	_createTitle: function(props) {
@@ -46,9 +47,11 @@ var SvgWrapper = React.createClass({
 	},
 
 	_getYOffset: function(props) {
-		var yOffset = 0
+		var yOffset = 0;
 		if (props.metadata.title.length > 0) { yOffset += props.displayConfig.afterTitle; }
 		if (props.metadata.subtitle.length > 0) { yOffset += props.displayConfig.afterSubtitle; }
+		if (props.metadata.title.length > 0 || props.metadata.subtitle.length > 0) { yOffset += props.displayConfig.beforeLegend; }
+		if (!props.needsLabelOffset) { yOffset -= props.displayConfig.legendHeightToRemove; }
 		return yOffset;
 	},
 
@@ -56,7 +59,8 @@ var SvgWrapper = React.createClass({
 		var props = this.props;
 		var margin = props.displayConfig.margin;
 		var yOffset = this._getYOffset(props);
-		// Add to the chart margin if title is present
+
+		// Add to the chart margin if title/subtitle/etc is present
 		var outerDimensions = {
 			width: props.outerDimensions.width,
 			height: props.outerDimensions.height + yOffset
