@@ -29,13 +29,15 @@ var SvgWrapper = React.createClass({
 	},
 
 	_createSubtitle: function(props) {
+		var titleHeight = (props.metadata.title.length > 0) ? props.displayConfig.afterTitle : 0;
+
 		return (
 			<SvgText
 				text={props.metadata.subtitle}
 				key="subtitle"
 				translate={[
 					props.displayConfig.margin.left,
-					(props.displayConfig.margin.top + props.displayConfig.afterTitle)
+					(props.displayConfig.margin.top + titleHeight)
 				]}
 				align="top"
 				className="svg-text-subtitle"
@@ -44,11 +46,10 @@ var SvgWrapper = React.createClass({
 	},
 
 	_getYOffset: function(props) {
-		if (props.metadata.title.length > 0) {
-			return props.displayConfig.afterTitle + props.displayConfig.afterSubtitle;
-		} else {
-			return 0;
-		}
+		var yOffset = 0
+		if (props.metadata.title.length > 0) { yOffset += props.displayConfig.afterTitle; }
+		if (props.metadata.subtitle.length > 0) { yOffset += props.displayConfig.afterSubtitle; }
+		return yOffset;
 	},
 
 	render: function() {
