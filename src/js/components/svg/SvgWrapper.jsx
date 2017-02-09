@@ -28,9 +28,24 @@ var SvgWrapper = React.createClass({
 		);
 	},
 
+	_createSubtitle: function(props) {
+		return (
+			<SvgText
+				text={props.metadata.subtitle}
+				key="subtitle"
+				translate={[
+					props.displayConfig.margin.left,
+					(props.displayConfig.margin.top + props.displayConfig.afterTitle)
+				]}
+				align="top"
+				className="svg-text-subtitle"
+			/>
+		);
+	},
+
 	_getYOffset: function(props) {
 		if (props.metadata.title.length > 0) {
-			return props.displayConfig.afterTitle;
+			return props.displayConfig.afterTitle + props.displayConfig.afterSubtitle;
 		} else {
 			return 0;
 		}
@@ -57,6 +72,7 @@ var SvgWrapper = React.createClass({
 			<svg className="chartbuilder-svg" width={outerDimensions.width} height={outerDimensions.height}>
 				<BackgroundRect dimensions={outerDimensions} />
 				{this._createTitle(props)}
+				{this._createSubtitle(props)}
 				<g
 					className="chart-margin"
 					transform={"translate(" + [translate.left, translate.top + this._getYOffset(props)] + ")"} >

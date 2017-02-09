@@ -5,7 +5,7 @@ var map = require("lodash/map");
 var help = require("../../util/helper.js");
 var ordinalAdjust = require("../../util/scale-utils").ordinalAdjust;
 
-var DY = "0.32em"
+var DY = "0.71em"
 
 var HorizontalAxis = React.createClass({
 

@@ -328,7 +328,7 @@ var XYRenderer = React.createClass({
 				/>
 				<HorizontalGridLines
 					tickValues={scale.primaryScale.tickValues}
-					x2={chartAreaDimensions.width + tickWidths.secondaryScale.max}
+					x2={chartAreaDimensions.width - margin.right}
 				/>
 				{verticalAxes}
 				{this._generateSeries(yAxes)}
@@ -504,7 +504,7 @@ var XYLabels = React.createClass({
 		var displayConfig = props.displayConfig;
 		var dimensions = props.dimensions;
 		var labelComponents = [];
-		var labelFont = styleConfig.fontSizes.medium + "px " + styleConfig.fontFamilies.labels;
+		var labelFont = styleConfig.fontSizes.large + "px " + styleConfig.fontFamilies.labels;
 
 		var labelConfig = {
 			xMargin: displayConfig.labelXMargin,

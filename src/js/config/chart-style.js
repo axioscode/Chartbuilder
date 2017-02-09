@@ -22,8 +22,8 @@ var chart_style = {
 		labels: "Gordita-Medium"
 	},
 	fontSizes: {
-		large: "0.7em",
-		medium: "0.65em",
+		large: "0.85em",
+		medium: "0.675em",
 		small: "0.6em"
 	},
 	dotRadiusFactor: 0.007, // size of dot as % of width

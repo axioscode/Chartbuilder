@@ -64,7 +64,12 @@ svg
 		&.right
 			text-anchor end
 	&.svg-text-title
-		fill $color-body-text
+		font-family $font-sans-medium
+		font-weight 900
+		fill $color-chart-title-text
+	&.svg-text-subtitle
+		font-family $font-mono
+		fill $color-chart-subtitle-text
 
 .medium .svg-text
 	font-size $em_size
@@ -73,7 +78,7 @@ svg
 	&.svg-text-source
 		font-size $em_size*0.6
 	&.svg-text-title
-		font-size $em_size
+		font-size $em_size*1.2
 
 .small .svg-text
 		font-size $em_size_small

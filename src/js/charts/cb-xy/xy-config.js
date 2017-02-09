@@ -33,12 +33,13 @@ var now = new Date();
 
 var display = {
 	labelRectSize: "0.6em",
-	labelXMargin: "0.6em",
+	labelXMargin: "0.5em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
 	afterTitle: "1.4em",
+	afterSubtitle: "1.25em",
 	afterLegend: "1em",
-	blockerRectOffset: "0.2em",
+	blockerRectOffset: "0.5em",
 	lineMarkThreshold: 10, // render marks (dots) on lines if data < N
 	columnOuterPadding: 0.01, // % of width to pad for columns
 	columnInnerPadding: 0, // % of col group width to pad btwn each
@@ -56,13 +57,13 @@ var display = {
 	margin: {
 		top: "0.8em",
 		right: "0.25em",
-		bottom: "0.15em",
-		left: "0.5em"
+		bottom: "0.25em",
+		left: "0.25em"
 	},
 	padding: {
 		top: 0,
-		right: "0.25em",
-		bottom: "1.5em",
+		right: 0,
+		bottom: "1.75em",
 		left: 0
 	}
 };

@@ -40,10 +40,8 @@ var chart_sizes = [
 ];
 
 var text_input_values = [
-	{ name: "title", content: "Title" },
-	{ name: "subtitle", content: "Subtitle", isRequired: false },
-	{ name: "credit", content: "Credit" },
-	{ name: "source", content: "Source" }
+	{ name: "title", content: "Title", isRequired: true },
+	{ name: "subtitle", content: "Subtitle", isRequired: true }
 ];
 
 /**
@@ -64,7 +62,8 @@ var ChartMetadata = React.createClass({
 			size: PropTypes.string.isRequired,
 			// source: PropTypes.string,
 			// credit: PropTypes.string,
-			title: PropTypes.string
+			title: PropTypes.string,
+			subtitle: PropTypes.string
 		}),
 		stepNumber: PropTypes.string,
 		additionalComponents: PropTypes.array
