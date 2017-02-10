@@ -1576,6 +1576,7 @@ canvas {
   -webkit-background-size: contain;
   -moz-background-size: contain;
   background-size: contain;
+  background-repeat: no-repeat;
   -webkit-transform: scale(1);
   -moz-transform: scale(1);
   -o-transform: scale(1);
