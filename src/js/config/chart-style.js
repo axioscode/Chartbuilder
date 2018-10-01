@@ -17,6 +17,16 @@
 var chart_style = {
 	overtick_top: "0.8em",
 	overtick_bottom: 10,
+	fontFamilies: { // necessary for calculating text width before render
+		axes: "Liberation Mono",
+		labels: "Gordita-Medium"
+	},
+	fontSizes: {
+		large: "0.85em",
+		medium: "0.675em",
+		small: "0.6em"
+	},
+	dotRadiusFactor: 0.007, // size of dot as % of width
 	numColors: 9,
 	xOverTick: "1em", // horizontal the distance between the yAxes and xAxis
 	creditMargin: "0.6em"

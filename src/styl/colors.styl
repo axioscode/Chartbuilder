@@ -16,15 +16,15 @@ $color-editor-text = #333333
 $color-editor-placeholder = #CACACA
 
 $chart-colors = \
-	#E74E29 \
-	#01356E \
-	#B09D86 \
-	#5827AE \
-	#FF6602 \
-	#027eb1 \
-	#4a4a4a \
-	#848484 \
-	#222
+	#0a99e0 \
+	#6741d4 \
+	#02c266 \
+	#e74e29 \
+	#ff7921 \
+	#ffd500 \
+	#b09d86 \
+	#979797 \
+	#222222
 
 for c, i in $chart-colors
 	[data-color-index=\"{i}\"]
@@ -40,14 +40,24 @@ for c, i in $chart-colors
 	.color-index-{i}
 		fill (c)
 
+	rect.color-index-{i}
+		fill (c)
+
+	path.color-index-{i}
+		stroke (c)
+
+	circle.color-index-{i}
+		fill (c)
+
 	rect[data-color-index=\"{i}\"]
 		fill (c)
 
 	text[data-color-index=\"{i}\"]
 		fill (c)
 
-	.d4 .axis .tick text[data-color-index=\"{i}\"]
-		fill (c)
+	g.axis.color-index-{i}
+		text
+			fill (c)
 
 	.cb-colorpicker-color-{i}
 		background-color (c)

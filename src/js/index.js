@@ -10,16 +10,16 @@ var ChartbuilderLocalStorageAPI = require("./util/ChartbuilderLocalStorageAPI");
 var Chartbuilder = require("./components/Chartbuilder.jsx");
 var container = document.querySelector(".chartbuilder-container");
 
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener("DOMContentLoaded", function () {
 	document.cookie = "authed=yes";
 	// Initialize data from localStorage
 	ChartbuilderLocalStorageAPI.defaultChart();
 	// Render parent chartbuilder component
 	ReactDOM.render(
 		<Chartbuilder
-			showMobilePreview={false}
+			showMobilePreview={true}
 			enableJSONExport={false}
 		/>,
-	container );
+		container);
 
 });

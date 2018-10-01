@@ -33,31 +33,39 @@ var now = new Date();
 
 var display = {
 	labelRectSize: "0.6em",
-	labelXMargin: "0.6em",
+	labelXMargin: "0.5em",
 	labelTextMargin: "0.3em",
 	labelRowHeight: "1.2em",
-	afterTitle: "1.6em",
-	afterSubtitle: "1em",
-	afterLegend: "1.6em",
-	blockerRectOffset: "0.3em",
-	columnPaddingCoefficient: 0.3,
+	afterTitle: "1.25em",
+	afterSubtitle: "1.25em",
+	beforeLegend: "0.25em",
+	legendHeightToRemove: "0.625em",
+	afterLegend: "0.25em",
+	blockerRectOffset: "0.5em",
+	lineMarkThreshold: 10, // render marks (dots) on lines if data < N
+	columnOuterPadding: 0.01, // % of width to pad for columns
+	columnInnerPadding: 0, // % of col group width to pad btwn each
 	minPaddingOuter: "1em",
 	bottomPaddingWithoutFooter: "3em",
+	yAxisOrient: {
+		primaryScale: "left",
+		secondaryScale: "right",
+	},
 	aspectRatio: {
-		wide: (9 / 16),
+		wide: (1 / 2),
 		longSpot: (4 / 3),
 		smallSpot: (3 / 4)
 	},
 	margin: {
 		top: "0.8em",
 		right: "0.25em",
-		bottom: "0.15em",
+		bottom: "0.25em",
 		left: "0.25em"
 	},
 	padding: {
-		top: "3em",
+		top: 0,
 		right: 0,
-		bottom: "2em",
+		bottom: "1.75em",
 		left: 0
 	}
 };
@@ -116,7 +124,7 @@ var defaultProps = {
 			}
 		],
 		extraPadding: {
-			top: "2em",
+			top: 0,
 			right: 0,
 			bottom: 0,
 			left: 0

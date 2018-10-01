@@ -65,11 +65,6 @@ function getStateFromStores() {
  * @property {function} onStateChange - Callback when state is changed
  * @property {Object} additionalComponents - Optional additional React components
  * @property {string} renderedSVGClassName - Optional class name for chart SVG class
- * @property {function} validateMeta - validate function that passes in the metadata where you can return an array of errors to be render under the ChartMeta ie: [{
- * 				location : "",
- *				text : "The title field is empty",
- *				type : "error"
- *			}]
  * @example
  * var React = require("react");
  * var Chartbuilder = require("./components/Chartbuilder.jsx");
@@ -89,7 +84,6 @@ var Chartbuilder = React.createClass({
 		showMobilePreview: PropTypes.bool,
 		onSave: PropTypes.func,
 		onStateChange: PropTypes.func,
-		validateMeta: PropTypes.func,
 		additionalComponents: PropTypes.shape({
 			metadata: PropTypes.array,
 			misc: PropTypes.object
@@ -128,22 +122,14 @@ var Chartbuilder = React.createClass({
 	},
 
 	_renderErrors: function() {
-
-		var metadataErrors = [];
-		if (this.props.validateMeta) {
-			metadataErrors = this.props.validateMeta(this.state.metadata);
-		}
-
-		var errorArrMessage = this.state.errors.messages.concat(metadataErrors);
-
-		if (errorArrMessage.length === 0) {
+		if (this.state.errors.messages.length === 0) {
 			return null;
 		} else {
 			return (
 				<div>
 					<h2>Have a look at these issues:</h2>
 					<AlertGroup
-						alerts={errorArrMessage}
+						alerts={this.state.errors.messages}
 					/>
 				</div>
 			);
@@ -264,7 +250,6 @@ var Chartbuilder = React.createClass({
 	_onChange: function() {
 		// On change, update and save state.
 		var state = getStateFromStores();
-
 		this.setState(state);
 
 		if (this.props.autosave && !this.state.session.timerOn) {
@@ -278,9 +263,7 @@ var Chartbuilder = React.createClass({
 				chartProps: state.chartProps,
 				metadata: state.metadata
 			});
-
 		}
-
 	}
 
 });
