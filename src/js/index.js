@@ -15,13 +15,10 @@ document.addEventListener("DOMContentLoaded", function () {
 	// Initialize data from localStorage
 	ChartbuilderLocalStorageAPI.defaultChart();
 	// Render parent chartbuilder component
-	ReactDOM.render( <
-		Chartbuilder showMobilePreview = {
-			true
-		}
-		enableJSONExport = {
-			false
-		}
+	ReactDOM.render(
+		<Chartbuilder
+			showMobilePreview={true}
+			enableJSONExport={false}
 		/>,
 		container);
 
